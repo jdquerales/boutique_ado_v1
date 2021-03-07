@@ -240,6 +240,22 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
+input {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
