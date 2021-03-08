@@ -190,6 +190,10 @@ input[name='q']::placeholder {
     color: #6c757d; /* text-secondary */
 }
 
+.form-control{
+    margin-top: 0px;
+}
+
 .allauth-form-inner-content input {
     border-color: #000;
     border-radius: 0;
