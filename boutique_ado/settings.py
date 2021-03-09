@@ -70,7 +70,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'boutique_ado.urls'
 
-CRISOY_TEMPLATES_PACK = 'bootstrap5'
+CRISPY_TEMPLATES_PACK = 'bootstrap5'
 
 TEMPLATES = [
     {
@@ -130,17 +130,22 @@ WSGI_APPLICATION = 'boutique_ado.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+
+DATABASES = {
+         'default': dj_database_url.parse('postgres://qmvoeuvozualqj:7929ad273508b5b17e9c8debd0ed6e522c3a2f0df70582984f3ab583c1091624@ec2-34-240-75-196.eu-west-1.compute.amazonaws.com:5432/d3gv4utdgonjst')
+}
+
+# if 'DATABASE_URL' in os.environ:
+#     DATABASES = {
+#         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         }
+#     }
 
 
 # Password validation
