@@ -134,10 +134,20 @@ if 'DATABASE_URL' in os.environ:
 else:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd9d1q2sgb4q7e4',
+        'USER': 'bgofoubeqsmwab',
+        'PASSWORD': '8ded087acae93800bbaf584c1836556cbaf9f9347c07307f2c28b5e4fe9eb5d2',
+        'HOST': 'ec2-52-19-170-215.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
+                    }
     }
+    # DATABASES = {
+    #     'default': {
+    #         'ENGINE': 'django.db.backends.sqlite3',
+    #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #     }
+    # }
 
 
 # Password validation
